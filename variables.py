@@ -20,7 +20,7 @@
 # first_name="ada"
 # last_name="lovelace"
 # full_name=f"{first_name} {last_name}"                                 # f字符串:通过把花括号内的变量替换为其值来设置字符串格式
-# print(full_name)
+# print(full_name)                                                      # 一种格式化字符串的语法
 # print(f"Hello, {full_name.title()}")
 # message=f"Hello, {full_name.upper()}"
 # print(message)
@@ -66,6 +66,7 @@ x,y,z=1,2,3                                                                     
 a,b,c="sun","glasses","red"
 print(f"{c.title()} {a.title()+b}")
 print(x+y+z)
+print(x+y+z==6)
 MAX_CONNECTIONS=500                                                                      # 常量一般用全大写表示
 print(MAX_CONNECTIONS)
 ###############################################################
