@@ -1,16 +1,16 @@
 ################################
 # age=19
 # if age>=18:                                                             # 最基本的if语句
-#     print("You are old enough to vote!")
-#     print("Have you registered to vote yet?")
+#     print("\nYou are old enough to vote!")
+#     print("Have you registered to vote yet?\n")
 
 # age=17
 # if age>=18:                                                             # if-else:只存在两种情形时
-#     print("You are old enough to vote!")
-#     print("Have you registered to vote yet?")
+#     print("\nYou are old enough to vote!")
+#     print("Have you registered to vote yet?\n")
 # else:
-#     print("Sorry, you are too young to vote.")
-#     print("Register to vote as soon as you turn 18!")
+#     print("\nSorry, you are too young to vote.")
+#     print("Register to vote as soon as you turn 18!\n")
 
 # age=12
 # if age<4:                                                               # if-elif-else:考虑的情形超过两个
@@ -82,7 +82,7 @@
 #     print("You are an adult.")
 # else:
 #     print("You are an old people.")
-
+   
 # favorite_fruits=['apple','banana','orange']
 # if 'apple' in favorite_fruits:
 #     print("\nu really like apple!")
@@ -106,7 +106,7 @@
 # requested_toppings=[]                                                    # 检查列表是否为空
 # if requested_toppings:                                                   # 将列表名用作条件表达式时，列表为空返回False,至少包含一个元素时为True
 #     for requested_topping in requested_toppings:
-#         print(f"Adding {requested_topping}")
+#         print(f"Adding {requested_topping}.")
 #     print("\nFinished making your pizza.")
 # else:
 #     print("Are u sure u want a plain pizza.")
@@ -142,9 +142,9 @@ cur_users=[name.lower() for name in current_users]                           # �
 new_users=['lily','jimmy','Sam','jack','John']
 for user in new_users:
     if user.lower() in cur_users:
-        print(f"\n{user} has been used,you need to change a name.")
+        print(f"\nName '{user}' has been used,you need to change a name.")
     else:
-        print(f"\nYou can use {user}.")
+        print(f"\nYou can use '{user}'.")
 
 # numbers=list(range(1,10))
 # for number in numbers:
