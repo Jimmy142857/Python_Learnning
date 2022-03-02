@@ -1,10 +1,10 @@
-#######################################
+##############################################
 # cars=['audi','bmw','subaru','toyota']
 # for car in cars:
 #     if car=='bmw':                                                   # if语句:条件测试表达式，测试值为真则执行紧跟其后的代码，为假则忽略这些代码
-#         print(car.upper())
+#         print(car.upper(),'\n')
 #     else:
-#         print(car.title())
+#         print(car.title(),'\n')
 
 # requested_topping='mushrooms'
 # if requested_topping!='anchovies':                                   # 判断两个值是否不相等
@@ -16,10 +16,10 @@
 
 # age_0=22
 # age_1=18
-# print(age_0>=21 and age_1>=21,"\n")                                  # and:两个都为真时条件才为真
+# print(age_0>=21 and age_1>=21,"\n")                                  # and:且，两个都为真时条件才为真
 # print((age_0>=21) and (age_1<=21),"\n")
-# print(age_0>=21 or age_1>=21,"\n")                                   # or:有一个为真时条件为真
-# print(age_0<=21 or age_1<=21)
+# print(age_0>=21 or age_1>=21,"\n")                                   # or:或，有一个为真时条件为真
+# print(age_0<=21 or age_1<=21,"\n")
 
 # requested_toppings=['mushrooms','onions','pineapple']
 # print('mushrooms' in requested_toppings)                             # in:判断特定值是否包含在列表中
@@ -46,23 +46,22 @@
 # print("\nIs car =='bmw'? I predict true.")
 # print(car=='bmw')
 
+
 cars=['Audi','subaru','Bmw','Toyota']                                # 模拟从列表中查找元素是否存在
 car="BMW"
-print(f"\nWhether {car} is in my garage?\n{car in cars}")
-print("Let's try again.")
+print(f"\nWhether {car} is in my garage? (True/False)\n{car in cars}")
+print("Let's try to find it.")
 car_founded='No'
 for ele in cars:
     if (car.lower()==ele.lower()):
         car_founded='Yep'
-print(f"Is my {car} founded?\n{car_founded}") 
+print(f"Again, is my {car} founded?\n{car_founded}") 
 
-# cars_1=[]
-# for ele in cars:                                                     # for生成新列表
-#     cars_1.append(ele.lower())
-# cars_2=[ele.lower() for ele in cars]                                 # 列表解析生成新列表
-# print(cars,cars_1,cars_2)
-# print(f"\nWhether {car} is in my garage?\n{car.lower() in cars_1}")
-# print(f"\nWhether {car} is in my garage?\n{car.lower() in cars_2}")
-####################################
-
-
+cars_1=[]
+for ele in cars:                                                     # for生成新列表
+    cars_1.append(ele.lower())
+cars_2=[ele.lower() for ele in cars]                                 # 列表解析生成新列表
+print(cars,cars_1,cars_2)
+print(f"\nWhether {car} is in my garage? (True/False)\n{car.lower() in cars_1}")
+print(f"\nWhether {car} is in my garage? (True/False)\n{car.lower() in cars_2}")
+######################################
