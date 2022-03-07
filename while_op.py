@@ -7,7 +7,7 @@
 #     confirmed_users.append(current_user)                                   # 在列表之间移动元素
 # print("\nThe following users have been confirmed:")
 # for confirmed_user in confirmed_users:
-#     print(f"\t{confirmed_user.title()}")
+#     print(f"  {confirmed_user.title()}")
 # print(unconfirmed_users)
 # print(confirmed_users)
 
@@ -28,6 +28,7 @@
 #         polling_active=False
 # print("\n--Poll Results--")
 # print(responses)
+# print()
 # for name,response in responses.items():
 #     print(f"{name.title()} would like to climb {response}.")
 ##########################################################
@@ -50,7 +51,7 @@
 # while 'pastrami' in sandwich_orders:
 #     sandwich_orders.remove('pastrami')
 # finished_sandwiches=sandwich_orders[:]                                      # 复制列表
-# print(finished_sandwiches)
+# print(f"This are the left:\n{finished_sandwiches}")
 
 places={}
 while True:
@@ -62,5 +63,5 @@ while True:
         break
 for name,place in places.items():
     print(f"\n{name.title()}'s dream place is {place}.")
-input()
+input()                                                                         # 暂停
 #####################################################
