@@ -32,14 +32,14 @@
 #         print(f"I'd love to go to {city.title()}!")
 
 # current_number=0
-# while current_number<10:
+# while current_number<100:
 #     current_number+=1
 #     if current_number%2 == 0:
 #         continue                                                               # continue:返回循环开头，根据条件测试结果决定是否继续执行循环
 #     print(current_number)
 
 # x=1
-# while x <= 5:                                                                  # 错误导致无限循环，cpu占用爆表
+# while x <= 5:                                                                  # 无退出条件，导致无限循环，cpu占用爆表
 #     print(x)
 ##########################################
 
@@ -50,11 +50,11 @@
 # prompt+="\nEnter 'quit' to end. "
 # active=True
 # while active:
-#     ingre=input(prompt)
-#     if ingre == 'quit':
+#     topping=input(prompt)
+#     if topping == 'quit':
 #         active=False
 #     else:
-#         print(f"We will add {ingre} to your pizza.")
+#         print(f"We will add {topping} to your pizza.")
 
 # age=10
 # while age > 0 and age <= 100:
