@@ -4,8 +4,8 @@
 #     'first':'enrico',
 #     'last':'fermi',
 #     }
-# for key,value in users_o.items():                                             # 遍历所有键值对
-#     print(f"\nKey: {key}")                                                    # items():返回一个包含所有键值对的列表
+# for ke,value in users_o.items():                                              # 遍历所有键值对
+#     print(f"\nKey: {ke}")                                                     # items():返回一个包含所有键值对的列表
 #     print(f"Value: {value}")
 
 # favorite_languages={
@@ -14,7 +14,7 @@
 #     'tom':'c++',
 #     'jack':'java',
 #     } 
-# for name,language in favorite_languages.items():                              # 将键名赋给name,值赋给language
+# for name,language in favorite_languages.items():                              # 将键名赋给name,键值赋给language
 #     print(f"{name}'s favorite language is {language.title()}.\n")
 
 # favorite_languages={
@@ -39,8 +39,10 @@
 # for name in favorite_languages.keys():
 #     print(f"Hi {name.title()}!")
 #     if name in friends:
-#         language=favorite_languages[name].title()                             # 将name的当前值作为键
-#         print(f"\t{name.title()}, I see u love {language}!")                  # 对朋友打印特殊消息
+#         language=favorite_languages[name].title()                               # 将name的当前值作为键
+#         print(f"{name.title()}, I guess u love {language}!\n")                  # 对朋友打印特殊消息
+#     else:
+#         print()    
 
 # favorite_languages={
 #     'lily':'c',
@@ -77,7 +79,7 @@
 
 
 
-###############################################
+##############################################
 # dictionary={                                                                  # practice
 #     'if':'条件判断',
 #     'for':'循环',
@@ -93,10 +95,10 @@
 #     }
 # for river,country in rivers.items():
 #     print(f"The {river.title()} runs through {country.title()}.")
-# print("\n")
+# print()
 # for river in rivers.keys():
 #     print(river.title())
-# print("\n")
+# print()
 # for country in rivers.values():
 #     print(country.title())
 
@@ -113,5 +115,3 @@ for guy in guys:
     else:
         print(f"{guy.title()}, we strongly invite u for the poll!\n")
 ##################################################
-
-

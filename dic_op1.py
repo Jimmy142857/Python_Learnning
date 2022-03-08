@@ -34,7 +34,7 @@
 # print(f"You ordered a {pizza['crust']}-crust pizza "
 #     "with the following toppings:")                                   # print()字符串很长时可以分行    
 # for topping in pizza['toppings']:
-#     print("\t"+topping)
+#     print("\t",topping)
 
 # favorite_languages={
 #     'lily':['python','c++'],                                          # 列表作为字典键值对
@@ -46,11 +46,11 @@
 #     if len(languages)==0:
 #         print(f"\n{name.title()} doesn't like any language.")
 #     elif len(languages)==1:
-#         print(f"\n{name.title()}'s favorite language is:\n\t{languages[0].title()}")
+#         print(f"\n{name.title()}'s favorite language is:\n{languages[0].title()}")
 #     else:
 #         print(f"\n{name.title()}'s favorite languages are:")
 #         for language in languages:
-#             print("\t"+language.title())
+#             print(language.title())
 
 # users={
 #     'lily':{
@@ -68,19 +68,19 @@
 #     print(f"\nUsername: {username.title()}")
 #     full_name=f"{user_info['first']} {user_info['last']}"
 #     location=user_info['location']
-#     print(f"\tFull name: {full_name.title()}")
-#     print(f"\tLocation: {location.title()}")
-##################################################
+#     print(f"Full name: {full_name.title()}")
+#     print(f"Location: {location.title()}")
+# ##################################################
 
 
 
-###########################################
+##########################################
 # guy_0={'name':'jimmy','age':'23','city':'wuhan'}                      # practice
 # guy_1={'name':'joy','age':'24','city':'chongqin'}
 # guy_2={'name':'zf','age':'23','city':'wuhan'}
 # people=[guy_0,guy_1,guy_2]
 # for guy in people:
-#     print(f"\n{guy['name'].title()} is {guy['age']} years old,and was born in {guy['city'].title()}.")
+#     print(f"\n{guy['name'].title()} is {guy['age']} years old, and was born in {guy['city'].title()}.")
 
 # pet_0={'type':'orange cat','owner':'jimmy'}
 # pet_1={'type':'white dog','owner':'joy'}
@@ -91,13 +91,13 @@
 
 # favorite_places={
 #     'jimmy':['whhan','nanjing','shanghai'],
-#     'joy':['chongqin','nanjing'],
-#     'zf':['whhan','chongqin','shenzhen'],
+#     'joy':['chongqin','nanjing','wuhan'],
+#     'zf':['whhan','chengdu','shenzhen'],
 #     }
 # for name,places in favorite_places.items():
 #     print(f"\n{name.title()}'s favorite places are:")
 #     for place in places:
-#         print(f"\t{place.title()}")
+#         print(f"{place.title()}")
 
 cities={
     'wuhan':{
