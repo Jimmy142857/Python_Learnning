@@ -15,14 +15,14 @@
 #     return full_name.title()
 # musician=get_formatted_name('jim','hendrix')                       # 没有中间名时
 # print(musician)
-# musician=get_formatted_name('john','hokker','lee')
+# musician=get_formatted_name('john','hokker',middle_name='lee')
 # print(musician)
 
 # def build_person(first_name,last_name,age=None):
 #     person={'first':first_name,'last':last_name}                   # 定义一个字典接受名和姓
 #     if age:
 #         person['age']=age                                          # 如果实参有age则存储在字典中
-#     return person
+#     return person                                                  # 返回字典
 # musician=build_person('micheal','jackson',20)
 # print(musician)
 
@@ -47,7 +47,7 @@
 
 #################################################
 # def city_country(city,country):                                    # practice
-#     city_info=f"{city.title()}, {country.title()}"
+#     city_info=f"{city.title()}, located in {country.title()}"
 #     return city_info
 # city_0=city_country('wuhan','china')
 # city_1=city_country('shanghai','china')
@@ -57,24 +57,25 @@
 # def make_album(name,album,number=None):
 #     albums={'name':name,'album':album}
 #     if number:
-#         albums['number']=number
+#         albums['sales']=number
 #     return albums
 # album_0=make_album('Micheal jackson','Thriller',10)
 # album_1=make_album('Queen','Queen Rocks')
 # album_2=make_album('萧敬腾','爱的自选时刻',8)
 # print(f"{album_0}\n{album_1}\n{album_2}")
 
+# album={}                                                                  # 用字典存储所有专辑信息
 # while True:
 #     print("\nPlease enter the name of the singer and the album:")
 #     print("Enter 'f' to quit")
 #     name=input("Singer's name:")
 #     if name == 'f':
 #         break
-#     album=input("Album's title:")
-#     if album == 'f':
+#     title=input("Album's title:")
+#     if title == 'f':
 #         break
-#     album_col=make_album(name,album)
-#     print(f"\nMy album:\n{album_col}")
+#     album[name]=make_album(name,title)
+# print(f"\nMy album:\n{album}")
 ################################################
 
 
@@ -91,7 +92,7 @@
 def print_models(unprinted_designs,completed_models):                       # 处理列表的函数
     """
     模拟打印每个设计，直到没有未打印的设计为止。
-    打印每个设计后，都将其移到列表completed_models。
+    打印每个设计后，将其移到列表completed_models。
     """
     while unprinted_designs:
         current_design=unprinted_designs.pop()
@@ -116,7 +117,7 @@ def show_completed_models(completed_models):                                # �
 
 #################################
 def make_pizza(size,*toppings):                                             # practice
-    """"概述要制作的pizza"""                                                 # 可传递任意数量位置实参
+    """"概述要制作的pizza"""                                                 # 形参带*可传递任意数量位置实参
     print(f"\nMaking a {size}-inch pizza with the following toppings:")
     for topping in toppings:
         print(f"- {topping}")

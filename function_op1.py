@@ -22,12 +22,13 @@
 # make_pizza(12,'beef','pork','extra cheese')                     # 任意数量实参必须放到最后
 
 
-# def build_profile(first,last,**user_info):                      # **user_info:创建一个空字典，并将收到的所有名称值对都放到这个字典中
+# def build_profile(first,last,**user_info):                      # **user_info:创建一个空字典，并将收到的所有键值对都放到这个字典中
 #     """创建一个字典，其中包含我们知道有关用户的一切。"""
 #     user_info['first_name']=first
 #     user_info['last_name']=last
 #     return user_info
 # user_profile=build_profile('albert','einstein',
+#                           gender='male',
 #                           location='princeton',
 #                           field='physics')                      # 传递两个键值对，相当于可传递任意数量的关键字实参
 # print(user_profile)
@@ -62,7 +63,7 @@
 #     return cars
 # car=make_car('Benz','AMG',
 #             color='red',
-#             turbo=True)
+#             turbo=False)
 # print(car)
 ####################################################
 

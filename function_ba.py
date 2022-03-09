@@ -17,10 +17,9 @@
 ######################################
 # def display_message():                                            # practice
 #     """打印一个句子，指出本章所学内容。"""
-#     print("I learn function in python this chapter.")
+#     print("I learn function of python this chapter.")
 # display_message()
 # print("\n"+display_message.__doc__)
-
 
 # def favorite_book(title):
 #     print(f"\nOne of my favorite book is {title.title()}.")
@@ -35,7 +34,7 @@
 #     print(f"\nI have a {animal_type}.")
 #     print(f"My {animal_type}'s name is {pet_name}.")
 # describe_pet('cat','joy')                                          # 位置实参:基于实参的顺序来关联实参和形参
-# describe_pet('dog','jimmy')                                        # 多次调用函数
+# describe_pet('dog',233)                                            # 多次调用函数
 
 # def describe_pet(animal_type,pet_name):                          
 #     """显示宠物的信息"""
@@ -51,7 +50,7 @@
 # describe_pet(pet_name='joy')
 # describe_pet('joy')
 # describe_pet(pet_name='joy',animal_type='dog')                     # 有实参时忽略默认值，使用实参值
-# describe_pet('joy','cat')
+# describe_pet('joy','dog')
 ####################################################
 
 
