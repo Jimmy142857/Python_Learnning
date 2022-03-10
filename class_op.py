@@ -2,16 +2,16 @@
 # class Car:                                                         # 创建子类时父类必须包含在当前文件中，且位于子类前面
 #     """一次模拟汽车的简单尝试"""
 
-#     def __init__(self,make,model,year):
+#     def __init__(self,manufacturer,model,year):
 #         """初始化描述汽车的属性"""
-#         self.make=make
+#         self.manufacturer=manufacturer
 #         self.model=model
 #         self.year=year
 #         self.odometer_reading=0                                       
 
 #     def get_descriptive_name(self):
 #         """返回整洁的描述性信息"""
-#         long_name=f"{self.year} {self.make} {self.model}"
+#         long_name=f"{self.year} {self.manufacturer} {self.model}"
 #         return long_name.title()    
     
 #     def read_odometer(self):
@@ -19,7 +19,8 @@
 #         print(f"This car has {self.odometer_reading} miles on it.")
     
 #     def update_odometer(self,miles):                            
-#         """将里程表读数设置为指定的值
+#         """
+#         将里程表读数设置为指定的值
 #         禁止里程表读数往回调
 #         """                                                          
 #         if miles >= self.odometer_reading:                           
@@ -75,7 +76,7 @@ from class_ba1 import Car                                          # 在一个�
 
 # print(my_tesla.get_descriptive_name())
 # my_tesla.describe_battery()                                           # 调用新方法
-# print('\n')
+# print()
 # my_car=Car('audi','r8',2021)
 # my_car.fill_gas_tank()
 # my_tesla.fill_gas_tank()                                              # 执行重新定义过的方法
@@ -115,14 +116,14 @@ class ElectricCar(Car):
 # my_tesla=ElectricCar('tesla','model 3',2021)
 
 # print(my_tesla.get_descriptive_name())
-# my_tesla.battery.describe_battery()                                   # 先找到属性，由于属性是实例，再调用实例中的方法
-# my_tesla.battery.get_range()
-# print('\n')
+# my_tesla.battery.describe_battery()                                   # 注意两个句点
+# my_tesla.battery.get_range()                                          # 先找到属性，由于属性是实例，再调用实例中的方法
+# print()
 
 # my_tesla.battery.battery_size=100
 # my_tesla.battery.describe_battery()
 # my_tesla.battery.get_range()
-########################################################
+#######################################################
 
 
 
@@ -142,7 +143,7 @@ class Restaurant:                                                         # prac
     
     def open_restaurant(self):
         """显示餐馆正在营业"""
-        print(f"The {self.restaurant_name.title()} is opening.")
+        print(f"The {self.restaurant_name.title()} restaurant is opening.")
 
 class IceCreamStand(Restaurant):
     """冰淇凌小店简单信息"""
@@ -156,9 +157,9 @@ class IceCreamStand(Restaurant):
         self.flavors=['chocolate','strawberry','vanilla']
     
     def show_toppings(self):
-        print("The icecream has the following flavors:")
+        print("\nThe icecream has the following flavors:")
         for topping in self.flavors:
-            print(topping.title())
+            print(f"--{topping.title()}")
 
 # icecreamstand=IceCreamStand('D&Q','dessert')
 # icecreamstand.describe_restaurant()
@@ -168,6 +169,7 @@ class IceCreamStand(Restaurant):
 
 class User:
     """一个人的基本信息"""
+
     def __init__(self,first_name,last_name,age):
         """姓、名、年龄"""
         self.first_name=first_name
@@ -201,9 +203,9 @@ class User:
     
 #     def show_privileges(self):
 #         """显示管理员权限"""
-#         print(f"{self.first_name} {self.last_name} has the following authorities:")
+#         print(f"\n{self.first_name.title()} {self.last_name.title()} has the following authorities:")
 #         for authority in self.privileges:
-#             print(authority)
+#             print(f"--{authority}")
 
 # admin=Admin('li','weijie',23)
 # admin.describe_user()
@@ -219,9 +221,9 @@ class Privileges:
     
     def show_privileges(self):
         """显示管理员权限"""
-        print(f"The person has the following authorities:")
+        print(f"\nThe administrator has the following authorities:")
         for authority in self.privileges:
-            print(authority)
+            print(f"--{authority}")
 
 class Admin(User):
 

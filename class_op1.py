@@ -11,18 +11,19 @@
 
 # my_car=Car('benz','amg',2021)
 # print(my_car.get_descriptive_name())
-# print('\n')
+# print()
 # my_tesla=ElectricCar('tesla','model 3',2021)
 # print(my_tesla.get_descriptive_name())
 # my_tesla.battery.describe_battery()
-# my_tesla.battery.get_range()
+# my_tesla.battery.battery_size=99
+# my_tesla.battery.describe_battery()
 
 
 # import class_op                                                         # 导入整个class_op模块，推荐使用
 
 # my_beetle=class_op.Car('volkswagen','beetle',2021)                      # 使用语法(module_name.ClassName)访问需要的类
 # print(my_beetle.get_descriptive_name())
-# print('\n')
+# print()
 # my_tesla=class_op.ElectricCar('tesla','model s',2021)
 # print(my_tesla.get_descriptive_name())
 
@@ -35,7 +36,7 @@
 
 # my_beetle=Car('volkswaagen','beetle',2021)
 # print(my_beetle.get_descriptive_name())
-# print('\n')
+# print()
 # my_tesla=ElectricCar('tesla','model s',2021)
 # print(my_tesla.get_descriptive_name())
 
@@ -95,7 +96,7 @@ class Die:
         point=R.randint(1,self.sides)
         print(f"The number is: {point}.")
 
-# dice=Die(10)
+# dice=Die(6)
 # for i in range(10):
 #     dice.roll_die()
 

@@ -1,16 +1,16 @@
-##############################
+# ##############################
 # class Car:
 #     """一次模拟汽车的简单尝试"""
 
-#     def __init__(self,make,model,year):
+#     def __init__(self,manufacturer,model,year):
 #         """初始化描述汽车的属性"""
-#         self.make=make
+#         self.manufacturer=manufacturer
 #         self.model=model
 #         self.year=year
     
 #     def get_descriptive_name(self):
 #         """返回整洁的描述性信息"""
-#         long_name=f"{self.year} {self.make} {self.model}"
+#         long_name=f"{self.year} {self.manufacturer} {self.model}"
 #         return long_name.title()
 
 # my_car=Car('audi','r8',2021)
@@ -19,16 +19,16 @@
 
 class Car:
 
-    def __init__(self,make,model,year):
+    def __init__(self,manufacturer,model,year):
         """初始化描述汽车的属性"""
-        self.make=make
+        self.manufacturer=manufacturer
         self.model=model
         self.year=year
         self.odometer_reading=0                                        # 在方法__init__中给属性指定默认值0
 
     def get_descriptive_name(self):
         """返回整洁的描述性信息"""
-        long_name=f"{self.year} {self.make} {self.model}"
+        long_name=f"{self.year} {self.manufacturer} {self.model}"
         return long_name.title()    
     
     def read_odometer(self):
@@ -56,14 +56,15 @@ class Car:
 # my_new_car=Car('audi','r8',2021)                                      # 实例my_new_car
 # print(my_new_car.get_descriptive_name())
 # my_new_car.read_odometer()
+# print()
 
 # my_new_car.odometer_reading=23                                        # 通过实例直接访问并修改属性的值
 # my_new_car.read_odometer()
-# print('\n')
+# print()
 
 # my_new_car.update_odometer(100)                                       # 调用方法修改属性值
 # my_new_car.read_odometer()
-# print('\n')
+# print()
 
 # my_new_car.increment_odometer(2000)                                   # 调用方法对属性的值进行递增
 # my_new_car.read_odometer()
@@ -88,7 +89,7 @@ class Restaurant:                                                        # pract
     
     def open_restaurant(self):
         """显示餐馆正在营业"""
-        print(f"The {self.restaurant_name.title()} is now opening.")
+        print(f"The {self.restaurant_name.title()} restaurant is now opening.")
     
     def set_number_served(self,number):
         """设置就餐人数"""
@@ -116,6 +117,7 @@ class Restaurant:                                                        # pract
 
 class User:
     """一个人的基本信息"""
+
     def __init__(self,first_name,last_name,age):
         """姓、名、年龄"""
         self.first_name=first_name
@@ -141,14 +143,14 @@ class User:
         self.login_attempts=0
 
 # user_0=User('li','weijie',23)
-# print("\n",user_0.login_attempts)
+# print(user_0.login_attempts)
 
 # user_0.increment_login_attempts()
-# print('\n',user_0.login_attempts)
+# print(user_0.login_attempts)
 
 # user_0.increment_login_attempts()
-# print('\n',user_0.login_attempts)
+# print(user_0.login_attempts)
 
 # user_0.reset_login_attempts()
-# print('\n',user_0.login_attempts)
+# print(user_0.login_attempts)
 #################################################
