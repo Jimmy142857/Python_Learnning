@@ -1,16 +1,15 @@
 #################################################
 # with open('pi_digits.txt') as file_object:                           # open():接受一个参数即要打开文件的名称，并返回一个表示文件的对象
-#     contents=file_object.read()                                      # read():一种方法，用来读取文件的全部内容，返回一个空字符串，显示为一个空行
-# print(contents)
-# print(contents.rstrip())                                             # 删除文件末尾空行
+#     contents=file_object.read(10)                                    # read(size):一种方法，用来读取文件中指定数量字符串,并将光标停留在读取结束位置
+# print(contents)                                                      # 默认读取整个文件内容
 
 
 # with open('text_file/pi_digits.txt') as file_object:                 # 目标文件存在于代码所在目录的子文件夹内时
 #     contents=file_object.read()                                      # 使用斜杠(/),或双反斜杠(\\),不使用反斜杠(\)
-# print(contents.rstrip())
+# print(contents.rstrip())                                             # 删除末尾空白
 
 
-# file_path='C:\\Users\\Jimmy\\Desktop\\Python_code\\text_file\\pi_digits.txt'         
+# file_path='C:\\Users\\Administrator\\Desktop\\Python_Learnning\\text_file\\pi_digits.txt'         
 # with open(file_path) as file_object:
 #     print(file_object.read())                                        # 绝对文件路径，不能使用反斜杠(\)
 
@@ -42,7 +41,7 @@
 #     pi_string_1+=line.strip()                                         # 删除段前段后所有空格
 # print(pi_string_0)
 # print(len(pi_string_0))
-# print('\n')
+# print()
 # print(pi_string_1)
 # print(len(pi_string_1))                                               # 读取文本文件时，python将其中所有文本解读为字符串，如果需要数值则需类型转换
 
@@ -72,18 +71,18 @@ filename='text_file/learning_python.txt'
 # with open(filename) as file_object:
 #     contents=file_object.read()
 #     print(contents.rstrip())
-# print('\n')
+# print()
 
 # with open(filename) as file_object:
 #     for line in file_object:
 #         print(line.rstrip())
-# print('\n')
+# print()
 
 with open(filename) as file_object:
     lines=file_object.readlines()
 for line in lines:
     print(line.strip())
-print('\n')
+print()
 
 with open(filename) as file_object:
     for line in file_object:

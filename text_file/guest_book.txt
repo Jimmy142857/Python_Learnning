@@ -1,9 +1,3 @@
 Name: Jimmy
-Reason: Forced
-
-Name: Joy
-Reason: Needed
-
-Name: Zf
-Reason: None
+Reason: For My Job...
 

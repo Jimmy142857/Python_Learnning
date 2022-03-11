@@ -1,6 +1,6 @@
 ################################
 # filename='text_file/programming.txt'
-                                                              # open(,):提供两个实参，第一个为要打开文件的名称，第二个为指定模式(默认只读)
+#                                                             # open(,):提供两个实参，第一个为要打开文件的名称，第二个为指定模式(默认只读)
 # with open(filename,'w') as file_object:                     # 'w'写入模式  'r'读取模式  'a'附加模式  'r+'读写模式
 #     file_object.write("I love programming.")                # 如果写入的文件不存在，open()将自动创建它;已存在则自动清空再写入
 #                                                             # 方法write()将字符串写入文件，python只能将字符串写入文本文件，若存储数值则要用str()转换
@@ -46,8 +46,8 @@ with open(filename,'a') as file_object:
         if reason == 'q':
             break
 
-        file_object.write("Name: "+name+"\n")
-        file_object.write("Reason: "+reason+"\n\n")
-        print('\n')
+        file_object.write("Name: "+name.title()+"\n")
+        file_object.write("Reason: "+reason.title()+"\n\n")
+        print()
 #####################################################
 
