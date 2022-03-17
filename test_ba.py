@@ -1,3 +1,4 @@
+#########################################
 def get_formatted_name(first,last):
     """生成简洁的姓名"""
     full_name=f"{first} {last}"
@@ -17,3 +18,47 @@ def get_formatted_name_2(first,last,middle=''):
     else:
         full_name=f"{first} {last}"
     return full_name.title()
+############################################
+
+
+
+###########################################
+def city_country(city,country):
+    """返回城市国家简洁信息"""
+    full_information=f"{city}, {country}"
+    return full_information.title()
+
+
+def city_country_1(city,country,population=''):
+    """返回城市国家简洁信息"""
+    if population:
+        full_information=f"{city}, {country} - population:{population}"
+    else:
+        full_information=f"{city}, {country}"
+    return full_information.title()
+##########################################
+
+
+
+############################################
+class AnonymousSurvey:
+    """收集匿名调查问卷的答案"""
+    
+    def __init__(self, question):
+        """存储一个问题，并为存储答案做准备"""
+        self.question = question
+        self.responses = []
+        
+    def show_question(self):
+        """显示调查问卷"""
+        print(self.question)
+        
+    def store_response(self, new_response):
+        """存储单份调查答卷"""
+        self.responses.append(new_response.title())
+        
+    def show_results(self):
+        """显示收到的所有答卷"""
+        print("Survey results:")
+        for response in self.responses:
+            print(f"- {response}")
