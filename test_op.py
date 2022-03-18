@@ -160,31 +160,56 @@
 #     unittest.main(argv=['ignored','-v'],exit=False)
 
 
+# import unittest
+# from test_ba import AnonymousSurvey
+# class TestAnonymousSurvey(unittest.TestCase):
+#     """针对AnoymousSurvey类的测试"""
+
+#     def setUp(self):                                                # 先运行setup()方法再运行各个以test_打头的方法
+#         """
+#         创建一个调查对象和一组答案，供使用的测试方法使用
+#         """
+#         question = "What language did you first learn to speak?"
+#         self.my_survey=AnonymousSurvey(question)                           # 创建一个调查对象
+#         self.responses=['English','Spanish','Chinese']                     # 创建一个答案列表
+
+#     def test_store_single_response(self):
+#         """测试单个答案会被妥善存储"""
+#         self.my_survey.store_response(self.responses[0])                              
+#         self.assertIn(self.responses[0],self.my_survey.responses)
+
+#     def test_store_three_response(self):
+#         """测试三个答案是否会被妥善存储"""
+#         for response in self.responses:
+#             self.my_survey.store_response(response.title())
+#         for response in self.responses:
+#             self.assertIn(response,self.my_survey.responses)
+
+# if __name__ == '__main__':
+#     unittest.main(argv=['ignored','-v'],exit=False)
+################################################################
+
+
+################################################################
 import unittest
-from test_ba import AnonymousSurvey
-class TestAnonymousSurvey(unittest.TestCase):
-    """针对AnoymousSurvey类的测试"""
+from test_ba import Employee
+class TestEmployee(unittest.TestCase):
+    """针对Employee类的测试"""
 
-    def setUp(self):                                                # 先运行setup()方法再运行各个以test_打头的方法
-        """
-        创建一个调查对象和一组答案，供使用的测试方法使用
-        """
-        question = "What language did you first learn to speak?"
-        self.my_survey=AnonymousSurvey(question)                           # 创建一个调查对象
-        self.responses=['English','Spanish','Chinese']                     # 创建一个答案列表
-
-    def test_store_single_response(self):
-        """测试单个答案会被妥善存储"""
-        self.my_survey.store_response(self.responses[0])                              
-        self.assertIn(self.responses[0],self.my_survey.responses)
-
-    def test_store_three_response(self):
-        """测试三个答案是否会被妥善存储"""
-        for response in self.responses:
-            self.my_survey.store_response(response.title())
-        for response in self.responses:
-            self.assertIn(response,self.my_survey.responses)
+    def setUp(self) -> None:
+        """创建一个雇员实例"""
+        self.employee=Employee('Jimmy','Page',65_000)
+        return super().setUp()
+    
+    def test_give_default_raise(self):
+        """测试雇员默认薪资是否被正常存储"""
+        self.assertEqual(65_000,self.employee.pay)
+    
+    def test_give_custom_raise(self):
+        """测试增加薪资方法是否正常"""
+        self.employee.give_raise()
+        self.assertEqual(70_000,self.employee.pay)
 
 if __name__ == '__main__':
     unittest.main(argv=['ignored','-v'],exit=False)
-################################################################
+##########################################################################

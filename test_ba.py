@@ -64,4 +64,16 @@ class AnonymousSurvey:
             print(f"- {response}")
 
 
-#################################################
+class Employee:
+    """雇员姓名年薪调查"""
+
+    def __init__(self,first,last,pay):
+        """存储姓名、年薪"""
+        self.first=first
+        self.last=last
+        self.pay=pay
+
+    def give_raise(self,add=5000):
+        """默认将年薪增加5000"""
+        self.pay+=add
+###############################################
