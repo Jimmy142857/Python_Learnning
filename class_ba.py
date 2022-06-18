@@ -2,9 +2,9 @@
 class Dog:                                                  # 定义一个名为Dog的类，依据约定首字母要大写
     """一次模拟小狗的简单操作"""                              # 字符串文档，对类的功能进行描述
 
-    def __init__(self,name,age):                            # 特殊方法，开头末尾必须有2个下划线; 自动传递实参self，它是一个指向实例本身的引用
+    def __init__(self, name, age):                          # 特殊方法，开头末尾必须有2个下划线; 自动传递实参self，它是一个指向实例本身的引用
         """初始化属性name和age"""                            # 形参self必不可少，而且必须位于其他形参前面
-        self.name=name.title()                                      # 获取与形参name相关联的值，并将其赋给变量name，然后该变量被关联到当前创建的实例
+        self.name=name.title()                              # 获取与形参name相关联的值，并将其赋给变量name，然后该变量被关联到当前创建的实例
         self.age=age                                        # name,age称作属性
 
     def sit(self):                                          # 方法sit,类中所定义的函数
